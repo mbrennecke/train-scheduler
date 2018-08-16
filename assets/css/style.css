@@ -1,0 +1,15 @@
+.container {
+	margin-bottom: 30px;
+}
+
+.jumbotron, .card-header {
+	background-color: #c0c0c0;
+	color: #0e2b8d!important;
+}
+.card {
+	margin-top: 15px;
+}
+
+th, label {
+	color: #0e2b8d;
+}
