@@ -28,6 +28,10 @@ $("#submitBtn").on("click", function(event) {
     var destination = $("#destination").val();
     var time = $("#time").val();
     var rate = $("#rate").val();
+	
+if (name == "" || destination == "" || rate < 1 || time == "" ) {
+	return;
+}
 
     database.ref().push({
         name: name,
