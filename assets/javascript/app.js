@@ -19,6 +19,8 @@ var firstTimeConverted;
 
   var database = firebase.database();
 
+  
+  //On button click of new train added this function runs
 $("#submitBtn").on("click", function(event) {
     event.preventDefault();
 
@@ -42,6 +44,7 @@ $("#submitBtn").on("click", function(event) {
 
 });
 
+//This will update the schedule once every minute or whatever the interval is set to
 
 function updateTime(){
 	var query = database.ref().orderByKey();
@@ -77,7 +80,7 @@ function displayTable(){
 
     
    
-
+//Updates time table every reload or when new train addeed
 database.ref().on("child_added", function(childSnapshot){
 	// First Time (pushed back 1 year to make sure it comes before current time)
     firstTimeConverted = moment(childSnapshot.val().time, "HHmm").subtract(1, "years");
@@ -91,6 +94,7 @@ database.ref().on("child_added", function(childSnapshot){
     
 });
 
+//interval to update times every minute
 	function run() {
       clearInterval(intervalId);
       var intervalId = setInterval(updateTime, 60*1000);
