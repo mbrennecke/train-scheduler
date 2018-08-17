@@ -2,9 +2,18 @@
 	margin-bottom: 30px;
 }
 
-.jumbotron, .card-header {
+.lead {
+	font-size: 2em;
+}
+
+.jumbotron {
 	background-color: #c0c0c0;
 	color: #0e2b8d!important;
+	padding: 2rem;
+}
+.card-header {
+	background-color: #c0c0c0;
+	color: #0e2b8d!important;	
 }
 .card {
 	margin-top: 15px;
