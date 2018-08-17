@@ -46,6 +46,7 @@ $("#submitBtn").on("click", function(event) {
 function updateTime(){
 	var query = database.ref().orderByKey();
 	query.once("value").then(function(snapshot){
+		$("#current").empty();
 		snapshot.forEach(function(childSnapshot) {
 	frequency = childSnapshot.val().rate;
 	
@@ -91,7 +92,6 @@ database.ref().on("child_added", function(childSnapshot){
 });
 
 	function run() {
-		$("#current").empty();
       clearInterval(intervalId);
       var intervalId = setInterval(updateTime, 60*1000);
     }
