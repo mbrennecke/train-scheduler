@@ -13,3 +13,7 @@ This project is useful for learning firebase calls and updates
 ## Who maintains this project
 
 This project is maintained by Matthew Brennecke mbrennecke10@gmail.com
+
+## Link to this project
+
+https://mbrennecke.github.io/train-scheduler/
